@@ -13,7 +13,8 @@ module Discordrb
       group: 3,
       category: 4,
       news: 5,
-      store: 6
+      store: 6,
+      stage: 13
     }.freeze
 
     # @return [String] this channel's name.
@@ -141,6 +142,11 @@ module Discordrb
     # @return [true, false] whether or not this channel is a store channel.
     def store?
       @type == 6
+    end
+
+    # @return [true, false] whether or not this channel is a stage channel.
+    def stage?
+      @type == 13
     end
 
     # @return [Channel, nil] the category channel, if this channel is in a category
